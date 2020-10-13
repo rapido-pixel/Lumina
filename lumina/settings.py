@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&du!$ft+1p@iud33@z-5-fw1vdx72tav5+f=d!^=#pfep#1fl&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['lumina-gallery.herokuapp.com', '127.0.0.1']
 
