@@ -19,14 +19,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '&du!$ft+1p@iud33@z-5-fw1vdx72tav5+f=d!^=#pfep#1fl&'
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '&du!$ft+1p@iud33@z-5-fw1vdx72tav5+f=d!^=#pfep#1fl&')
+SECRET_KEY = '&du!$ft+1p@iud33@z-5-fw1vdx72tav5+f=d!^=#pfep#1fl&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lumina-gallery.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -45,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,6 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'homepage'
