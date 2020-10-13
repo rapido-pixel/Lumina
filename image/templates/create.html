@@ -1,0 +1,15 @@
+{% extends "form_template.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+<title>Upload an image</title>
+{% endblock %}
+
+{% block main %}
+<form class="form-signin" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-lg btn-outline-secondary btn-block" type="submit">Upload</button>
+</form>
+{% endblock %}

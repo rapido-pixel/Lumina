@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+
+{% block title %}
+<title>Profile</title>
+{% endblock %}
+
+{% block main %}
+<div class="user-info">
+    <div class="main-info">
+        <img src="{{user.profile.photo.url}}">
+        <div class="username">
+            <span>{{user.username}}</span>
+            <p>{{user.first_name}} {{user.last_name}}</p>
+        </div>
+    </div>
+    <div class="extra-info">
+        {% if user.profile.about != None %}
+        <p class="about-user size">
+            {{user.profile.about}}
+        </p>
+        {% endif %}
+        <ul>
+            <li>
+                <a href="mailto:{{user.email}}" class="size">{{user.email}}</a>
+            </li>
+            <li>
+                <a href="https://{{user.profile.link}}" class="size">{{user.profile.link}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="image-list" class="image-container">
+    {% include "images.html" with images=user.created.all %}
+</div>
+
+{% endblock %}

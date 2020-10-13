@@ -1,0 +1,84 @@
+.main {
+    margin: 10px;
+}
+
+.presentation {
+    box-shadow:0px 5px 10px 0px rgba(0,0,0,1);
+    -webkit-box-shadow:0px 5px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow:0px 5px 10px 0px rgba(0,0,0,1);
+}
+
+.bg-color {
+    background-color: #512da8;
+}
+
+.row {
+    margin: 0;
+}
+
+.card-color {
+    background-color: #9575cd;
+}
+
+img.avatar {
+    width: 300px;
+}
+
+.user-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    min-height: 300px;
+    margin: 20px 0 20px 0;
+
+}
+
+.user-info img {
+    border-radius: 100px;
+    border: 2px solid;
+    width: 200px;
+    height: 200px;
+}
+
+.main-info {
+    margin: 5px;
+    padding: 5px;
+    flex: 0 1 auto;
+}
+
+.username {
+    font-size: 40px;
+    text-align: center;
+}
+
+.extra-info {
+    margin: 5px;
+    padding: 5px;
+    flex: 0 1 auto;
+}
+
+.about-user {
+    width: 500px;
+    word-wrap: break-word;
+}
+
+.extra-info li {
+    list-style-type: none;
+
+}
+.extra-info ul {
+    margin-left: 0;
+    padding-left: 0;
+
+}
+
+.extra-info a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.size {
+    font-size: 25px;
+}

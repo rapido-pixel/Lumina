@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Homepage</title>
+{% endblock %}
+
+{% block main %}
+<div class="presentation">
+    <h1>Lumina</h1>
+    <p>
+        Рhotohosting where you can upload your favorite photos, arts, and images.
+        Upload your own images and view other users images.
+    </p>
+</div>
+<div id="image-list" class="image-container">
+    {% include "images.html" %}
+</div>
+
+{% endblock %}

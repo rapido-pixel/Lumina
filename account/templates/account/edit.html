@@ -1,0 +1,17 @@
+{% extends "form_template.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Edit Your account</title>
+{% endblock %}
+
+{% block main %}
+<form class="form-signin" method="post" enctype="multipart/form-data">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    {% csrf_token %}
+    {{ user_form|crispy }}
+    {{ profile_form|crispy }}
+    <button class="btn btn-lg btn-outline-secondary btn-block" type="submit">Save</button>
+</form>
+{% endblock %}
