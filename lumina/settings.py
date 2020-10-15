@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'image.apps.ImageConfig',
     'easy_thumbnails',
-    'crispy_forms'
+    'crispy_forms',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -132,6 +133,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+AWS_ACCESS_KEY_ID = 'AKIAZQ5APV2RQVCH5WYY'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'lumina-media'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+
+DEFAULT_FILE_STORAGE = 'lumina.storage_backends.MediaStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
