@@ -134,9 +134,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-AWS_ACCESS_KEY_ID = 'AKIAZQ5APV2RQVCH5WYY'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'lumina-media'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
+AWS_STORAGE_BUCKET_NAME = ''
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 AWS_S3_OBJECT_PARAMETERS = {
@@ -161,4 +161,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES['default'].update(db_from_env)hgf
