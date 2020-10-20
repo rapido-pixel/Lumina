@@ -153,9 +153,6 @@ LOGIN_REDIRECT_URL = 'homepage'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Heroku: Update database configuration from $DATABASE_URL.
