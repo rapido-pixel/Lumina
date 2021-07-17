@@ -1,4 +1,4 @@
 # Lumina
-Photogalley website on Django
+Photogallery website on Django
 
 https://lumina-gallery.herokuapp.com
